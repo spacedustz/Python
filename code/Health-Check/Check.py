@@ -3,11 +3,17 @@ import subprocess
 import time
 import psutil
 
+def kill_process_by_name(process_name):
+    """프로세스 이름으로 프로세스를 찾아 종료하는 함수"""
+    for proc in psutil.process_iter():
+        if proc.name() == process_name:
+            proc.kill()
+            print(f"{process_name} 프로세스를 종료했습니다.")
 
 def check_and_run_process():
     now = datetime.datetime.now()
     start_time = now.replace(hour=9, minute=0, second=0, microsecond=0)
-    end_time = now.replace(hour=9, minute=10, second=0, microsecond=0)
+    end_time = now.replace(hour=11, minute=45, second=0, microsecond=0)
 
     cvedia_process_name = "cvediart.exe"
     java_process_name = "java.exe"
@@ -15,10 +21,13 @@ def check_and_run_process():
     cvedia_path = "CVEDIA-RT.bat"
     jar_path = "Z:\\Github\\Project\\SK-Gas\\build\\libs\\bridge.jar"
 
+    # 스크립트 시작 전에 특정 프로세스를 종료
+    kill_process_by_name(cvedia_process_name)
+    kill_process_by_name(java_process_name)
+
     while True:
         now = datetime.datetime.now()
         if start_time <= now <= end_time:
-            # 현재 실행 중인 프로세스 목록에서 CVEDIA-RT.exe와 java.exe가 실행 중인지 확인
             cvedia_running = any(cvedia_process_name in p.name() for p in psutil.process_iter())
             java_running = any(java_process_name in p.name() for p in psutil.process_iter())
 
