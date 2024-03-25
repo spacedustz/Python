@@ -6,8 +6,8 @@ import psutil
 
 def check_and_run_process():
     now = datetime.datetime.now()
-    start_time = now.replace(hour=11, minute=0, second=0, microsecond=0)
-    end_time = now.replace(hour=20, minute=0, second=0, microsecond=0)
+    start_time = now.replace(hour=9, minute=0, second=0, microsecond=0)
+    end_time = now.replace(hour=9, minute=10, second=0, microsecond=0)
 
     cvedia_process_name = "cvediart.exe"
     java_process_name = "java.exe"
@@ -38,11 +38,11 @@ def check_and_run_process():
                     proc.kill()
                     print(f"{proc.name()} 프로세스 종료")
 
+            print(f"운영시간이 아닙니다 - 운영시간 : {str(start_time)[11:16]} ~ {str(end_time)[11:16]}")
             time.sleep(60)
             continue
 
         time.sleep(10)
-
 
 if __name__ == "__main__":
     check_and_run_process()
