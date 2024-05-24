@@ -175,3 +175,11 @@ plt.show()
 # 업데이트 된 파일 저장
 df.to_csv('updated_online_retail_data.csv', index=False)
 ```
+
+<br>
+
+실행 해보면 Pandas로 분석한 데이터를 seaborn과 metaplotlib을 이용해 시각화하여,
+
+분석하기 좋은 히트맵으로 출력할 수 있습니다.
+
+![](./1.png)

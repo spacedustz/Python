@@ -1,6 +1,14 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+import matplotlib.font_manager as fm
+from matplotlib import rcParams
+
+# 한글 폰트 설정
+plt.rcParams['font.family'] = 'Malgun Gothic'
+
+# 마이너스 기호 문제 해결
+rcParams['axes.unicode_minus'] = False
 
 # CSV 파일을 읽어오기
 df = pd.read_csv('online_retail_data.csv')
