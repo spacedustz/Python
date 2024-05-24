@@ -98,7 +98,12 @@ OrderID,CustomerID,OrderDate,Product,Category,Price,Quantity,Country
 
 **코드**
 
+- Pandas로 CSV를 읽어 컬럼들을 이용해 매출, 그룹별 매출, 국가 필터링, 피벗 테이블 생성
+- Pandas의 hist()함수, metaplotlib을 이용한 데이터 시각화
+- seaborn의 heatmap() 함수를 이용한 Pandas 데이터 프레임들의 상관관계 행렬 시각화
+- seaborn의 displot(), pairplot()을 이용한 분포도/관계도 시각화
 
+Pandas와 시각화 라이브러리들을 이용해 데이터 분석에 원하는 차트, 표등을 만들 수 있습니다.
 
 ```python
 import pandas as pd
@@ -108,7 +113,7 @@ import seaborn as sns
 # CSV 파일을 읽어오기
 df = pd.read_csv('online_retail_data.csv')
 
-# 데이터 프레임의 상위 5개 행을 출력
+# 데이터 프레임의 상위 5개 행 출력
 print(df.head())
 
 # 데이터 프레임의 기본 정보 출력 (열 이름, 데이터 타입, null 값 등)
