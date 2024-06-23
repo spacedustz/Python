@@ -42,7 +42,7 @@ for number in range(1, 11, 3):
 
 ```python
 while condition:
-    # Code
+    # Brewery
 ```
 
 ---

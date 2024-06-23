@@ -182,4 +182,4 @@ df.to_csv('updated_online_retail_data.csv', index=False)
 
 분석하기 좋은 히트맵으로 출력할 수 있습니다.
 
-![](./1.png)
+![](1.png)
