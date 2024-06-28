@@ -7,6 +7,7 @@
 **Numpy**
 
 - [Numpy 배열 생성 & 인덱싱 & 슬라이싱](./Data-Science-School/Numpy/Numpy-1.ipynb)
+- [Numpy 자료형 & 배열 생성 & Inf, NaN](./Data-Science-School/Numpy/Numpy-2.ipynb)
 
 ---
 
